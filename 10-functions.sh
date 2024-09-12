@@ -9,4 +9,7 @@ exit 1
 else echo "You are ROOT"
 fi
 }
+
+yum install mysql -y
+VALIDATE
  
