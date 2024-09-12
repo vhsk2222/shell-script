@@ -11,7 +11,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "Sscript started executing $TIMESTAMP" &>> LOGFILE
 
 VALIDATE(){
-    if [ $1 -ne 0] 
+    if [ $1 -ne 0 ] 
     then 
         echo -e "$2 ...$R Failed ..$N"
     else 
@@ -34,6 +34,6 @@ do
         yum install $package -y &>> LOGFILE
         VALIDATE $? "Installation of $package"
     else
-        echo -e "$PACKAGE is already installed ... $Y SKIPPING $N"
+        echo -e "$package is already installed ... $Y SKIPPING $N"
     fi
 done
