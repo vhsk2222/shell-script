@@ -2,6 +2,6 @@
 
 ID=$(id -u)
 if [ $ID -ne 0 ]
-then echo "ERROR: not root access"
+then echo "ERROR: A ROOT USER"
 else echo "You are ROOT"
 fi
