@@ -15,3 +15,19 @@ exit 1
 else echo "INSTALLATION SUCCESSFUL"
 fi 
 
+yum install git -y
+
+if [ $? -ne 0 ]
+then echo "INSTALLATION FAILED"
+exit 1
+else echo "INSTALLATION SUCCESSFUL"
+fi 
+
+yum install git -y
+
+if [ $? -ne 0 ]
+then echo "INSTALLATION FAILED"
+exit 1
+else echo "INSTALLATION SUCCESSFUL"
+fi 
+
