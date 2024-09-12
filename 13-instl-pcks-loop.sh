@@ -11,9 +11,12 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "Sscript started executing $TIMESTAMP" &>> LOGFILE
 
 VALIDATE(){
-if [ $1 -ne 0] 
-then echo -e "$2 ...$R Failed ..$N"
-else echo -e "$2 ...$G SUCCESSSSS ..$N"
+    if [ $1 -ne 0] 
+    then 
+        echo -e "$2 ...$R Failed ..$N"
+    else 
+        echo -e "$2 ...$G SUCCESSSSS ..$N"
+    fi
 }
 if [ $ID -ne 0 ]
 then echo -e "$R ERROR: NOT A ROOT USER $N"
