@@ -1,8 +1,9 @@
 #!/bin/bash
 
 ID=$(id -u)
-echo "Script Nmae: $0"
-#LOG_FILE=/tmp/
+TIMESTAMP=$(date +%F-%H-%M-%S)
+echo "Script Name: $0"
+LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){
 if [ $1 -ne 0 ]
@@ -18,10 +19,10 @@ exit 1 #You can give other than zero, that will stop the programm if the perviou
 else echo "You are ROOT"
 fi 
 
-yum install mysql -y
+yum install mysql -y &>> $LOG_FILE
 VALIDATE $? "Installed MYSQL"
 
-yum install git -y
+yum install git -y &>> $LOG_FILE
 VALIDATE $? "Installed GIT"
 
  
